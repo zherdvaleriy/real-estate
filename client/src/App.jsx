@@ -1,4 +1,6 @@
 import "./App.css";
+import {MantineProvider} from '@mantine/core'
+import '@mantine/core/styles.css'
 import Companies from "./components/Companies/Companies";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -12,20 +14,27 @@ import Value from "./components/Value/Value";
 
 
 function App() {
+
   return (
-    <div className="App">
-      <div>
-        <div className="white-gradient" />
-        <Header />
-        <Hero />
-      </div>
-      <Companies />
-      <Residencies/>
-      <Value/>
-      <Contact/>
-      <GetStarted/>
-      <Footer/>
-    </div>
+    <MantineProvider>
+
+
+          <div className="App">
+              <div>
+                <div className="white-gradient"/>
+                <Header />
+                <Hero />
+              </div>
+                <Companies />
+                <Residencies/>
+                <Value/>
+                <Contact/>
+                <GetStarted/>
+                <Footer/>
+          </div>
+
+
+    </MantineProvider>
   );
 }
 
