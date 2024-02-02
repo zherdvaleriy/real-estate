@@ -23,8 +23,8 @@ const Hero = () => {
             }}
             >
               Discover <br />
-              Most Suitable
-              <br /> Property
+              House of Your
+              <br />  <span style={{color: 'darkviolet'}}> Dream</span>
             </motion.h1>
           </div>
           <div className="flexColStart secondaryText flexhero-des">
