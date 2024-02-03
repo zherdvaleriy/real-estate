@@ -24,7 +24,7 @@ const Hero = () => {
             >
               Discover <br />
               House of Your
-              <br />  <span style={{color: 'darkviolet'}}> Dream</span>
+              <br />  <span > Dream</span>
             </motion.h1>
           </div>
           <div className="flexColStart secondaryText flexhero-des">
