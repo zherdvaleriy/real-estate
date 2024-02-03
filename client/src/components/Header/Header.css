@@ -48,6 +48,5 @@ a:not(:last-child):hover{
   border-bottom: 2px solid white;
   scale: 1.06;
   color: var(--blue);
-  
-
 }
+
