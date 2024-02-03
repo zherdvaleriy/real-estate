@@ -1,14 +1,10 @@
+import { Suspense } from "react";
 import "./App.css";
 import {MantineProvider} from '@mantine/core'
 import '@mantine/core/styles.css'
-import Companies from "./components/Companies/Companies";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import GetStarted from "./components/GetStarted/GetStarted";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Residencies from "./components/Residencies/Residencies";
-import Value from "./components/Value/Value";
+import Website from "./pages/Website"
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Layout from "./components/Layout/Layout";
 
 
 
@@ -18,21 +14,16 @@ function App() {
   return (
     <MantineProvider>
 
+       <BrowserRouter>
+        <Suspense fallback={<di>Loading ...</di>}>
+          <Routes>
+            <Route element={<Layout/>} >
+              <Route path="/" element={<Website/>} />
 
-          <div className="App">
-              <div>
-                <div className="white-gradient"/>
-                <Header />
-                <Hero />
-              </div>
-                <Companies />
-                <Residencies/>
-                <Value/>
-                <Contact/>
-                <GetStarted/>
-                <Footer/>
-          </div>
-
+            </Route>
+          </Routes>
+        </Suspense>
+       </BrowserRouter>
 
     </MantineProvider>
   );
