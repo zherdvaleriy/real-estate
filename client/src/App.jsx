@@ -6,20 +6,21 @@ import Website from "./pages/Website"
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Layout from "./components/Layout/Layout";
 import Properties from "./pages/Properties/Properties";
-// import {QueryClient, QueryClientProvider} from 'react-query'
-// import {ReactQueryDevtools} from 'react-query/devtools'
+import {QueryClient, QueryClientProvider} from 'react-query'
+import {ReactQueryDevtools} from 'react-query/devtools'
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
 
 function App() {
-  // const queryClient = new QueryClient()
+  const queryClient = new QueryClient()
 
   return (
     <MantineProvider >
 
-      {/* <QueryClientProvider client={queryClient}> */}
+      <QueryClientProvider client={queryClient}>
        <BrowserRouter>
         <Suspense fallback={<div>Loading ...</div>}>
           <Routes>
@@ -31,8 +32,8 @@ function App() {
         </Suspense>
        </BrowserRouter>
        <ToastContainer/>
-      {/* </QueryClientProvider> */}
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </MantineProvider>
   );
 }
