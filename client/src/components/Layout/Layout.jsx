@@ -3,6 +3,8 @@ import React, { useContext, useEffect } from 'react';
 import { useMutation } from 'react-query';
 import { Outlet } from 'react-router-dom';
 import UserDetailContext from '../../context/UserDetail';
+import useBookings from '../../hooks/useBookings';
+import useFavorites from '../../hooks/useFavorites';
 import { createUser } from '../../utils/api';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -13,6 +15,10 @@ import Header from '../Header/Header';
 
 
 const Layout = () => {
+
+  useFavorites()
+  useBookings()
+
   const { isAuthenticated, user, getAccessTokenSilently } = useAuth0();
   const { setUserDetails } = useContext(UserDetailContext);
 

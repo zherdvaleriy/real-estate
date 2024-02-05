@@ -128,6 +128,52 @@ export const createUser = async (email, token) => {
         toast.error('Failed adding to favorites')
         throw error
       }
+  }
+
+
+
+  export const getAllFav = async(email, token) => {
+    if(!token) return
+    try {
+      const res = await api.post(`api/user/allFav`,
+       {email},
+       {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+       }
+      )
+      console.log(res)
+      return res.data['favResidenciesID']
+        
+    } catch (error) {
+        toast.error('Failed getting all favorites')
+        throw error
+    }
+  }
+
+
+
+
+  export const getAllBookings = async(email, token) => {
+    if(!token) return
+     try {
+       const res = await api.post(`api/user/bookings`,
+       {email},
+       {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+       }
+       )
+       console.log('res', res)
+       return res.data['bookedVisits']
+
+      
+     } catch (error) {
+      toast.error('Failed getting all bookings')
+      throw error
+     }
 
   }
   
