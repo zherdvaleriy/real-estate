@@ -31,6 +31,8 @@ export const getAllProperties = async() =>{
 
 
 
+
+
 export const getProperty = async(id) => {
     try {
         const response = await api.get(`api/residency/${id}`, {
@@ -47,6 +49,7 @@ export const getProperty = async(id) => {
             throw error
         }
 }
+
 
 
 
@@ -90,6 +93,7 @@ export const createUser = async (email, token) => {
 
 
 
+
   export const removeBooking = async(id, email, token) => {
       try {
         await api.post(`api/user/remove-booking/${id}`,
@@ -104,5 +108,26 @@ export const createUser = async (email, token) => {
       } catch (error) {
         toast.error('Something went wrong while cancelling the booking, try again')
       }
+  }
+
+
+
+
+
+  export const toFav  = async(id, email, token) => {
+      try {
+        await api.post(`api/user/toFav/${id}`,
+        {email},
+        {
+            headers: {
+                Authorization: `Bearer ${token}`
+            },
+        })
+        
+      } catch (error) {
+        toast.error('Failed adding to favorites')
+        throw error
+      }
+
   }
   
