@@ -5,6 +5,8 @@ import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
 import { Link, NavLink } from "react-router-dom";
+import {useAuth0} from '@auth0/auth0-react'
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 
 
@@ -13,6 +15,9 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+  const {loginWithRedirect, isAuthenticated, user, logout} = useAuth0()
+
+
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -36,7 +41,14 @@ const Header = () => {
               <NavLink to={'/properties'} >Properties</NavLink>
               <a href="mailto:user1@gmail.com">Contact</a>
 
-              <button className="button">Login</button>
+              {
+                !isAuthenticated ?
+                (<button className="button" onClick={loginWithRedirect} >
+                    Login
+                  </button>) : 
+                (<ProfileMenu/>)
+                  
+               }
           
           </div>
         </OutsideClickHandler>
