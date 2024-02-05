@@ -80,14 +80,29 @@ export const createUser = async (email, token) => {
         headers: {
             Authorization: `Bearer ${token}`
         }
-       }
-       )
+       })
 
-        
      } catch (error) {
         toast.error('Something went wrong while booking a visit, try again')
         throw error
      }
+  }
 
+
+
+  export const removeBooking = async(id, email, token) => {
+      try {
+        await api.post(`api/user/remove-booking/${id}`,
+        {email},
+        
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+      
+      } catch (error) {
+        toast.error('Something went wrong while cancelling the booking, try again')
+      }
   }
   
