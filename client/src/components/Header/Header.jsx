@@ -46,7 +46,7 @@ const Header = () => {
                 (<button className="button" onClick={loginWithRedirect} >
                     Login
                   </button>) : 
-                (<ProfileMenu/>)
+                (<ProfileMenu user={user} logout={logout} />)
                   
                }
           

@@ -1,8 +1,27 @@
 import React from 'react'
+import {Avatar, Menu} from '@mantine/core'
 
-const ProfileMenu = () => {
+
+
+const ProfileMenu = ({user,logout}) => {
   return (
-    <div>ProfileMenu</div>
+    <Menu>
+        <Menu.Target>
+            <Avatar src={user?.picture} alt='user image' radius={'xl'} />
+        </Menu.Target>
+        <Menu.Dropdown>
+            <Menu.Item>Favorites</Menu.Item>
+
+            <Menu.Item>Bookings</Menu.Item>
+
+            <Menu.Item onClick={() => {
+                localStorage.clear()
+                logout()
+            }} >
+                logout
+            </Menu.Item>
+        </Menu.Dropdown>
+    </Menu>
   )
 }
 
