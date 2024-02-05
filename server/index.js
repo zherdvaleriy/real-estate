@@ -8,15 +8,17 @@ import residencyRoute from './routes/residencyRoutes.js'
 
 
 
-
 const app = express();
 
 const port = process.env.PORT || 7000;
 const db = process.env.DB_URI;
 
+
+
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
+
 
 
 app.use('/api/user', userRoute);
