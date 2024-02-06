@@ -2,6 +2,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Modal, Stepper, Button, Group } from '@mantine/core'
 import React, { useState } from 'react'
 import AddLocation from '../AddLocation/AddLocation'
+import BasicDetails from '../BasicDetails/BasicDetails'
 import UploadImage from '../UploadImage/UploadImage'
 
 
@@ -19,7 +20,7 @@ const AddPropertyModal = ({opened, setOpened }) => {
         country: '',
         city: '',
         address: '',
-        image: 'null',
+        image: null,
         facilities: {
             bedrooms: 0,
             parkings: 0,
@@ -57,23 +58,28 @@ const AddPropertyModal = ({opened, setOpened }) => {
                    />
                 </Stepper.Step>
 
-                <Stepper.Step label="Second step" description="Verify email">
-                   <UploadImage/>
+                <Stepper.Step label="Images" description="Upload">
+                   <UploadImage 
+                      prevStep={prevStep}
+                      nextStep={nextStep}
+                      propertyDetails={propertyDetails}
+                      setPropertyDetails={setPropertyDetails}
+                    />
                 </Stepper.Step>
 
-                <Stepper.Step label="Final step" description="Get full access">
-                Step 3 content: Get full access
+                <Stepper.Step label="Final step" description="Get full information">
+                   <BasicDetails 
+                     prevStep={prevStep}
+                     nextStep={nextStep}
+                     propertyDetails={propertyDetails}
+                     setPropertyDetails={setPropertyDetails}
+                    />
                 </Stepper.Step>
                 <Stepper.Completed>
                 Completed, click back button to get to previous step
                 </Stepper.Completed>
 
             </Stepper>
-
-            {/* <Group justify="center" mt="xl">
-                <Button variant="default" onClick={prevStep}>Back</Button>
-                <Button onClick={nextStep}>Next step</Button>
-            </Group> */}
        </Container>
     </Modal>
   )
