@@ -9,7 +9,7 @@ const ProfileMenu = ({user,logout}) => {
         <Menu.Target>
             <Avatar src={user?.picture} alt='user image' radius={'xl'} />
         </Menu.Target>
-        <Menu.Dropdown>
+        <Menu.Dropdown style={{backgroundColor: 'lightgray'}}>
             <Menu.Item>Favorites</Menu.Item>
 
             <Menu.Item>Bookings</Menu.Item>

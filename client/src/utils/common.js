@@ -41,3 +41,8 @@ export const checkFavorites = (id, favorites) => {
 return favorites?.includes(id) ? '#fa3e5f' : 'white'
 
 }
+
+
+export const validateString = (value) => {
+   value?.length < 3 || value === null ? 'Write at least 3 characters' : null
+}
