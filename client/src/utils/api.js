@@ -188,6 +188,7 @@ export const createUser = async (email, token) => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
+        
           },
         }
       );

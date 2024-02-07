@@ -14,7 +14,9 @@ import Header from '../Header/Header';
 
 
 
+
 const Layout = () => {
+
 
   useFavorites()
   useBookings()

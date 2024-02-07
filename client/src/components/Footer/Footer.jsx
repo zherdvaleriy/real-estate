@@ -1,12 +1,20 @@
 import React from "react";
+import Map from "../Map/Map";
 import "./Footer.css";
 
 
 
 
-const Footer = () => {
+
+const Footer = ({isPropertyPage}) => {
+
   return (
     <div className="f-wrapper">
+
+        <div className="paddings innerWidth f-container">
+            <Map address={'145 New York, FL 5467, USA'} />
+        </div>
+        
       <div className="paddings innerWidth flexCenter f-container">
         {/* left side */}
         <div className="flexColStart f-left">
@@ -17,6 +25,7 @@ const Footer = () => {
           </span>
         </div>
 
+        
         <div className="flexColStart f-right">
           <span className="primaryText">Information</span>
           <span className="secondaryText">145 New York, FL 5467, USA</span>
