@@ -5,8 +5,8 @@ import { prisma } from '../config/prismaConfig.js';
 
 
 export const createResidency = asyncHandler(async (req, res) => {
-    const {title, description, price, address, country, city, image, facilities, userEmail} = req.body.data
-    console.log(req.body.data)
+    const {title, description, price, address, country, city, image, facilities, userEmail} = req.body
+    console.log(req.body)
 
     try {
      const residency = await prisma.residency.create({
@@ -24,6 +24,7 @@ export const createResidency = asyncHandler(async (req, res) => {
     res.status(201).json({message: 'Residency created successfully', data: residency})
         
     } catch (error) {
+        console.log(error)
         if (error.code === 'P2002') {
             res.status(400).json({ message: 'A residency with this address is already enlisted' })
           } else {
