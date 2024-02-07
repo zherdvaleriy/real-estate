@@ -3,6 +3,7 @@ import { Container, Modal, Stepper, Button, Group } from '@mantine/core'
 import React, { useState } from 'react'
 import AddLocation from '../AddLocation/AddLocation'
 import BasicDetails from '../BasicDetails/BasicDetails'
+import Facilities from '../Facilities/Facilities'
 import UploadImage from '../UploadImage/UploadImage'
 
 
@@ -67,7 +68,7 @@ const AddPropertyModal = ({opened, setOpened }) => {
                     />
                 </Stepper.Step>
 
-                <Stepper.Step label="Final step" description="Get full information">
+                <Stepper.Step label="Basics" description="Details">
                    <BasicDetails 
                      prevStep={prevStep}
                      nextStep={nextStep}
@@ -75,6 +76,16 @@ const AddPropertyModal = ({opened, setOpened }) => {
                      setPropertyDetails={setPropertyDetails}
                     />
                 </Stepper.Step>
+
+                <Stepper.Step>
+                  <Facilities 
+                     prevStep={prevStep}
+                     nextStep={nextStep}
+                     propertyDetails={propertyDetails}
+                     setPropertyDetails={setPropertyDetails}
+                    />
+                </Stepper.Step>
+
                 <Stepper.Completed>
                 Completed, click back button to get to previous step
                 </Stepper.Completed>
