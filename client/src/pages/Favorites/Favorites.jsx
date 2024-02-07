@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import useProperties from '../../hooks/useProperties'
-import './Properties.css'
+import '../Properties/Properties.css'
 import {PuffLoader} from 'react-spinners'
 import PropertyCard from '../../components/PropertyCard/PropertyCard'
+import UserDetailContext from '../../context/UserDetail'
 
 
 
 
-const Properties = () => {
+const Favorites = () => {
  const {data, isError, isLoading} = useProperties()
  const [filter, setFilter] = useState('')
+ const {userDetails: {bookings}} = useContext(UserDetailContext)
 
 
 if(isError){
@@ -41,13 +43,16 @@ if(isLoading){
     <div className='wrapper'>
         <div className="flexColCenter paddings innerWidth properties-container">
 
+            <h2>My Bookings</h2>
           <SearchBar filter={filter} setFilter={setFilter} />
 
           <div className="paddings flexCenter properties">
 
             {
                 // data.map((card, index) => (<PropertyCard card={card} key={index} />))
+                bookings && bookings.length > 0 &&
                 data
+                   .filter((property) => bookings.map((booking) => booking.id).includes(property.id))
                    .filter((property) => 
                                  property.title.toLowerCase().includes(filter.toLowerCase()) || 
                                  property.city.toLowerCase().includes(filter.toLowerCase()) || 
@@ -62,4 +67,4 @@ if(isLoading){
   )
 
   }
-export default Properties
+export default Favorites

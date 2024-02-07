@@ -28,9 +28,9 @@ const Facilities = ({
       bathrooms: propertyDetails.facilities.bathrooms,
     },
     validate: {
-      bedrooms: (value) => (value < 1 ? "Must have atleast one room" : null),
+      bedrooms: (value) => (value < 1 ? "Must have at least one room" : null),
       bathrooms: (value) =>
-        value < 1 ? "Must have atleast one bathroom" : null,
+        value < 1 ? "Must have at least one bathroom" : null,
     },
   });
 
@@ -58,9 +58,11 @@ const Facilities = ({
     userDetails: { token },
   } = useContext(UserDetailContext);
   const { refetch: refetchProperties } = useProperties();
+  
 
   const {mutate, isLoading} = useMutation({
-    mutationFn: ()=> createResidency({
+
+    mutationFn: () => createResidency({
         ...propertyDetails, facilities: {bedrooms, parkings , bathrooms},
     }, token),
     onError: ({ response }) => toast.error(response.data.message, {position: "bottom-right"}),

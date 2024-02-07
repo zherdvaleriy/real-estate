@@ -180,24 +180,23 @@ export const createUser = async (email, token) => {
 
 
   export const createResidency = async (data, token) => {
-    console.log(data)
-    try{
+    console.log(data);
+    try {
       const res = await api.post(
         `api/residency/create`,
-        {data},
-        
+        data,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
-      )
-
-    }catch(error)
-
-    {
-      toast.error('Failed creating a residency')
-      throw error
+      );
+      
+      return res.data;
+    } catch (error) {
+      toast.error('Failed creating a residency');
+      throw error;
     }
-  }
+  };
+  
   
