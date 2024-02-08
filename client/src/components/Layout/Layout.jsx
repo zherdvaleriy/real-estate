@@ -1,7 +1,7 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React, { useContext, useEffect } from 'react';
 import { useMutation } from 'react-query';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import UserDetailContext from '../../context/UserDetail';
 import useBookings from '../../hooks/useBookings';
 import useFavorites from '../../hooks/useFavorites';
@@ -16,7 +16,13 @@ import Header from '../Header/Header';
 
 
 const Layout = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  
 
   useFavorites()
   useBookings()
