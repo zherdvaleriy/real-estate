@@ -1,6 +1,6 @@
 import { useAuth0 } from '@auth0/auth0-react'
 import { Container, Modal, Stepper, Button, Group } from '@mantine/core'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AddLocation from '../AddLocation/AddLocation'
 import BasicDetails from '../BasicDetails/BasicDetails'
 import Facilities from '../Facilities/Facilities'
@@ -14,7 +14,19 @@ const AddPropertyModal = ({opened, setOpened }) => {
     const {user} = useAuth0()
 
 
+     useEffect(() => {
+          if (user) {
+              setPropertyDetails(prevDetails => ({
+                  ...prevDetails,
+                  id: user.id,
+                  userEmail: user.email
+              }));
+          }
+      }, [user]);
+
+
     const [propertyDetails, setPropertyDetails] = useState({
+
         title: '',
         description: '',
         price: 0,
