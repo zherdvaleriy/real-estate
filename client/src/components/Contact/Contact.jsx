@@ -73,11 +73,15 @@ const Contact = () => {
                     <HiChatBubbleBottomCenter size={25} />
                   </div>
                   <div className="flexColStart detail">
-                    <span className="primaryText">Message</span>
+                    <span className="primaryText">
+                      Message
+                    </span>
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Message now</div>
+                <div className="flexCenter button">
+                <a href="mailto:user1@mail.com">Message now</a>
+                </div>
               </div>
             </div>
           </div>
