@@ -16,8 +16,8 @@ const Contact = () => {
           <span className="orangeText">Our Contact Us</span>
           <span className="primaryText">Easy to contact us</span>
           <span className="secondaryText">
-            We always ready to help by providijng the best services for you. We
-            beleive a good blace to live can make your life better{" "}
+            We always ready to help by providing the best services for you. We
+            believe a good blace to live can make your life better{" "}
           </span>
 
           <div className="flexColStart contactModes">
@@ -33,7 +33,9 @@ const Contact = () => {
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Call now</div>
+                <div className="flexCenter button">
+                 <a href="tel:0491511234567"> Call now</a>
+                </div>
               </div>
 
               <div className="flexColCenter mode">

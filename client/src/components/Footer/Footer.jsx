@@ -6,7 +6,7 @@ import "./Footer.css";
 
 
 
-const Footer = ({isPropertyPage}) => {
+const Footer = () => {
 
   return (
     <div className="f-wrapper">

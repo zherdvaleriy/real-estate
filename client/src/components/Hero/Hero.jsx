@@ -27,14 +27,16 @@ const Hero = () => {
               <br />  <span > Dream</span>
             </motion.h1>
           </div>
-          <div className="flexColStart secondaryText flexhero-des">
+          <div className="flexColStart secondaryText flex-hero-des">
             <span>Find a variety of properties that suit you very easilty</span>
             <span>Forget all difficulties in finding a residence for you</span>
           </div>
 
+          <div className="flexCenter " style={{width: '25rem'}}>
+            <span className="info-welcome">Welcome to our estate agency, where we specialize in personalized service and expert guidance to help you find the perfect home. With a commitment to integrity and client satisfaction, we are dedicated to making your real estate journey smooth and successful.</span>
+          </div>
 
-
-         <SearchBar/>
+         {/* <SearchBar/> */}
 
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
