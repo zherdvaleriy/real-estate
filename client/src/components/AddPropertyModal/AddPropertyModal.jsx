@@ -14,35 +14,38 @@ const AddPropertyModal = ({opened, setOpened }) => {
     const {user} = useAuth0()
 
 
-     useEffect(() => {
-          if (user) {
-              setPropertyDetails(prevDetails => ({
-                  ...prevDetails,
-                  id: user.id,
-                  userEmail: user.email
-              }));
-          }
-      }, [user]);
-
-
+    
+    
     const [propertyDetails, setPropertyDetails] = useState({
-
-        title: '',
-        description: '',
-        price: 0,
-        country: '',
-        city: '',
-        address: '',
-        image: null,
-        facilities: {
-            bedrooms: 0,
-            parkings: 0,
-            bathrooms: 0,
-        },
-        userEmail: user?.email, 
+      
+      title: '',
+      description: '',
+      price: 0,
+      country: '',
+      city: '',
+      address: '',
+      image: null,
+      facilities: {
+        bedrooms: 0,
+        parkings: 0,
+        bathrooms: 0,
+      },
+      userEmail: user?.email, 
     })
+    
+    
+    useEffect(() => {
+         if (user) {
+             setPropertyDetails(prevDetails => ({
+                 ...prevDetails,
+                 id: user.id,
+                 userEmail: user.email
+             }));
+         }
+     }, [user]);
 
 
+     
     const nextStep = () => {
       setActive((current) => (current < 4 ? current + 1 : current))
     }

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+
+
+
 const useHeaderColor = () => {
 const [headerColor, setHeaderColor] = useState(false)
   //to handle shadow of header

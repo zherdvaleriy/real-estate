@@ -1,6 +1,7 @@
 :root {
   --primary: #1f3e72;
   --secondary: rgba(255, 255, 255, 0.78);
+  --mantine-color-white: #fff;
   --black: #131110;
   --gray: #818589;
   --steelgray: #71797e;
