@@ -4,6 +4,12 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
+import { Link, NavLink } from "react-router-dom";
+import {useAuth0} from '@auth0/auth0-react'
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
+import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
+import useAuthCheck from "../../hooks/useAuthCheck";
+
 
 
 
@@ -11,12 +17,25 @@ import OutsideClickHandler from "react-outside-click-handler";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+  const [modalOpened, setModalOpened] = useState(false)
+  const {loginWithRedirect, isAuthenticated, user, logout} = useAuth0()
+  const {validateLogin} = useAuthCheck()
+
+
+  const handleAddPropertyClick = () => {
+    if(validateLogin){
+      setModalOpened(true)
+    }
+  }
+
 
   return (
-    <section className="h-wrapper" style={{ background: headerColor }}>
+    <section className="h-wrapper" style={{ backgroundColor: 'var( --gray) '}}>
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
-        <img src="./logo.svg" alt="logo" width={170} style={{ filter: `invert(100%)`}} />
+        <Link className="nav-logo" to={'/'} >
+           <img src="./logo.svg" alt="logo" width={170} style={{ filter: `invert(100%)`}} />
+        </Link>
 
         {/* menu */}
         <OutsideClickHandler
@@ -25,17 +44,32 @@ const Header = () => {
           }}
         >
           <div
-          
             className="flexCenter h-menu"
             style={getMenuStyles(menuOpened)}
           >
-            <a href="#residencies">Residencies</a>
-            <a href="#value">Our Value</a>
-            <a href="#contact-us">Contact Us</a>
-            <a href="#get-started">Get Started</a>
-            <button className="button">
+
+              <NavLink to={'/properties'} >Properties</NavLink>
               <a href="mailto:user1@gmail.com">Contact</a>
-            </button>
+
+
+              {/* add property */}
+
+
+             <div onClick={handleAddPropertyClick} >Add property</div>
+             <AddPropertyModal 
+                 opened={modalOpened}
+                 setOpened={setModalOpened}
+                  />
+
+
+              { !isAuthenticated ?
+                (<button className="button" onClick={loginWithRedirect} >
+                    Login
+                  </button>) : 
+                (<ProfileMenu user={user} logout={logout} />)
+                  
+               }
+          
           </div>
         </OutsideClickHandler>
 

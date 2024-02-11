@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import errorHandler from './middlewares/errorHandler.js';
+
 import userRoute from './routes/userRoutes.js';
 import residencyRoute from './routes/residencyRoutes.js'
 
@@ -10,8 +10,9 @@ import residencyRoute from './routes/residencyRoutes.js'
 
 const app = express();
 
-const port = process.env.PORT || 7000;
-const db = process.env.DB_URI;
+const port = process.env.PORT || 7000
+
+
 
 
 

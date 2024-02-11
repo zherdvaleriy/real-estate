@@ -98,3 +98,16 @@
     font-size: 0.8rem;
   }
 }
+
+@media  (max-width: 420px){
+  .hero-title{
+     margin-left: 3rem;
+  }
+  .flex-hero-des{
+    margin: 0 3rem;
+  }
+  .info-welcome{
+   padding: 0 3rem;
+  }
+  
+}
