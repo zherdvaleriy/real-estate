@@ -11,6 +11,10 @@
     border: 1px solid gray;
     border-radius: 4px;
   }
+
+  .react-chatbot-kit-chat-input {
+    outline: none;
+  }
   
   /* .react-chatbot-kit-chat-inner-container {
     background-color: rgb(243, 249, 249);

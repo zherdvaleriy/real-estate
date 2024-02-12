@@ -1,4 +1,4 @@
-.wrapper {
+.wrap {
     padding-top: calc(var(--mantine-spacing-xl) * 2);
     min-height: rem(820px);
     width: 65%;
@@ -15,7 +15,7 @@
    
   }
   
-  .title {
+  .title1 {
     color: var(--mantine-color-white);
     font-size: 52px;
     font-family:

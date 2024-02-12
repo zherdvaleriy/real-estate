@@ -14,6 +14,7 @@ import Property from "./pages/Property/Property";
 import UserDetailContext from "./context/UserDetail";
 import Bookings from "./pages/Bookings/Bookings";
 import Favorites from "./pages/Favorites/Favorites";
+import NotFound from "./pages/NotFound/NotFound";
 
 
 
@@ -44,8 +45,8 @@ function App() {
                   </Route>
                   <Route path="/bookings" element={<Bookings/>} />
                   <Route path="/favorites" element={<Favorites/>} />
-
                 </Route>
+                <Route path="*" element={<NotFound/>} />
               </Routes>
             </Suspense>
           </BrowserRouter>

@@ -12,9 +12,9 @@ const placeholder =
 
 const Faq = () => {
   return (
-    <div className={'wrapper'}>
+    <div className={'wrap'}>
       <Container size="sm">
-        <Title ta="center" className={'title'}>
+        <Title ta="center" className={'title1'}>
           Frequently Asked Questions
         </Title>
 
