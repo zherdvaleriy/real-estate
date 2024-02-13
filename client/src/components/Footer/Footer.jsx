@@ -63,7 +63,9 @@ const Footer = () => {
           <div className="flexColCenter f-menu">
             <span> <Link to={'/properties'} >Properties</Link> </span>
             <span>Services</span>
-            <span>Product</span>
+            
+            <span><Link to={'/faq'} >FAQ</Link></span>
+
             <span>About Us</span>
           </div>
         </div>

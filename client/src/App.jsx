@@ -15,6 +15,7 @@ import UserDetailContext from "./context/UserDetail";
 import Bookings from "./pages/Bookings/Bookings";
 import Favorites from "./pages/Favorites/Favorites";
 import NotFound from "./pages/NotFound/NotFound";
+import Faq from "./components/Faq/Faq";
 
 
 
@@ -39,17 +40,19 @@ function App() {
                 <Route element={<Layout/>} >
                   
                   <Route path="/" element={<Website/>} />
+                  <Route path="/faq" element={<Faq/>} />
                   <Route path="/properties">
                     <Route index element={<Properties/>} />
                     <Route path=":propertyId" element={<Property/>} />
                   </Route>
                   <Route path="/bookings" element={<Bookings/>} />
                   <Route path="/favorites" element={<Favorites/>} />
+
                 </Route>
                 <Route path="*" element={<NotFound/>} />
               </Routes>
             </Suspense>
-          </BrowserRouter>
+           </BrowserRouter>
           <ToastContainer/>
           <ReactQueryDevtools initialIsOpen={false} />
           </QueryClientProvider>
