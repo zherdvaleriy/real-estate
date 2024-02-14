@@ -9,6 +9,7 @@ import SearchBar from "../SearchBar/SearchBar.jsx";
 const Hero = () => {
   return (
     <section className="hero-wrapper">
+   
       <div className="paddings innerWidth flexCenter hero-container">
         {/* left side */}
         <div className="flexColStart hero-left">
@@ -73,10 +74,11 @@ const Hero = () => {
             }}
             className="image-container"
           >
-            <img src="./house-banner.png" alt="houses" />
+            <img src="./banner3.jpg" alt="houses"  style={{borderRadius: '100px 30px'}}/>
           </motion.div>
         </div>
       </div>
+      
     </section>
   );
 };

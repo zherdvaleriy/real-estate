@@ -1,7 +1,47 @@
 .c-container{
+
     justify-content: space-around;
     gap: 1rem;
+}
+.c-container>video{
+    width: 100%;
 }
 .c-container>img{
     width: 9rem;
 }
+
+.companies-logo{
+    position: absolute;
+    top: 50rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.companies-logo>img{
+    width: 12rem;
+}
+
+.overlay{
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    height: 68rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .companies-logo>img{
+        width: 6rem;
+       
+    }
+  }
+
+  @media (max-width: 950px) {
+    .companies-logo{
+      
+      display: none;  
+    }
+  }
