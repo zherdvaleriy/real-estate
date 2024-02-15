@@ -48,14 +48,18 @@ const Header = () => {
             style={getMenuStyles(menuOpened)}
           >
 
-              <NavLink to={'/properties'} >Properties</NavLink>
+              <NavLink to={'/properties'} > Rent</NavLink>
+
+              <NavLink to={'/properties'} > Buy</NavLink>
+
+
               <a href="mailto:user1@gmail.com">Contact</a>
 
 
               {/* add property */}
 
 
-             <div onClick={handleAddPropertyClick} >Add property</div>
+             <div className="add-property" onClick={handleAddPropertyClick} >Add property</div>
              <AddPropertyModal 
                  opened={modalOpened}
                  setOpened={setModalOpened}
