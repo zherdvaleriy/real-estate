@@ -11,6 +11,8 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css'
 import {MdOutlineArrowDropDown} from 'react-icons/md'
 import data from '../../utils/accordion'
+import {Tilt} from 'react-tilt'
+
 
 
 
@@ -23,9 +25,13 @@ const Value = () => {
         <div className="paddings innerWidth flexCenter v-container">
             {/* left side */}
              <div className="v-left">
-                <div className="image-container">
-                    <img src="./house6lg.png" alt="image" />
-                </div>
+
+                <Tilt>
+                    <div className="image-container">
+                        <img src="./house6lg.png" alt="image" />
+                    </div>
+                </Tilt>
+                
              </div>
 
              {/* right side */}

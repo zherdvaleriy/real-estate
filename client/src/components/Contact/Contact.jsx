@@ -3,6 +3,7 @@ import "./Contact.css";
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import {HiChatBubbleBottomCenter} from 'react-icons/hi2'
+import { Tilt } from "react-tilt";
 
 
 
@@ -89,9 +90,13 @@ const Contact = () => {
 
         {/* right side */}
         <div className="flexEnd c-right">
-          <div className="image-container">
-            <img src="./estate-img1.jpg" alt="" />
-          </div>
+
+          <Tilt>
+              <div className="image-container">
+                <img src="./estate-img1.jpg" alt="" />
+              </div>
+          </Tilt>
+          
         </div>
       </div>
     </div>

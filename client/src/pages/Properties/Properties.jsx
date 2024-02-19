@@ -39,11 +39,11 @@ if(isLoading){
 //  console.log(data)
   return (
     <div className='wrapper'>
-        <div className="flexColCenter paddings innerWidth properties-container">
+        <div className="flexColCenter paddings innerWidth properties-container ">
 
           <SearchBar filter={filter} setFilter={setFilter} />
 
-          <div className="paddings flexCenter properties">
+          <div className="paddings flexCenter properties " style={{gap: '15px'}} >
 
             {
                 // data.map((card, index) => (<PropertyCard card={card} key={index} />))

@@ -1,7 +1,9 @@
 import "./Hero.css";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import SearchBar from "../SearchBar/SearchBar.jsx";
+import {Tilt} from 'react-tilt'
+// import SearchBar from "../SearchBar/SearchBar.jsx";
+
 
 
 
@@ -64,20 +66,25 @@ const Hero = () => {
         </div>
 
         {/* right side */}
-        <div className="flexCenter hero-right">
-          <motion.div
-            initial={{ x: "7rem", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              duration: 2,
-              type: "ease-in",
-            }}
-            className="image-container"
-          >
-            <img src="./banner3.jpg" alt="houses"  style={{borderRadius: '100px 30px'}}/>
-          </motion.div>
-        </div>
-      </div>
+
+          <Tilt>
+              <div className="flexCenter hero-right">
+                  <motion.div
+                    initial={{ x: "7rem", opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{
+                      duration: 2,
+                      type: "ease-in",
+                    }}
+                    className="image-container"
+                  >
+
+                        <img src="./banner3.jpg" alt="houses"/> 
+
+                  </motion.div>
+              </div>
+            </Tilt>
+    </div>
       
     </section>
   );
