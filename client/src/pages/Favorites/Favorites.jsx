@@ -26,7 +26,7 @@ if(isError){
 if(isLoading){
 
     return (
-        <div className="wrapper flexCenter" style={{height: '60vh'}} >
+        <div className="wrapper flexCenter" style={{height: '60vh', gap: '0px'}} >
            <PuffLoader
                height="80"
                width="80"
@@ -41,12 +41,12 @@ if(isLoading){
 //  console.log(data)
   return (
     <div className='wrapper'>
-        <div className="flexColCenter paddings innerWidth properties-container">
+        <div className="flexColCenter paddings innerWidth properties-container" >
 
             <h2>My Favorites</h2>
           <SearchBar filter={filter} setFilter={setFilter} />
 
-          <div className="paddings flexCenter properties">
+          <div className="paddings flexCenter properties" style={{gap: '20px'}}>
 
             {
                 // data.map((card, index) => (<PropertyCard card={card} key={index} />))
