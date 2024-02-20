@@ -16,6 +16,8 @@ import Bookings from "./pages/Bookings/Bookings";
 import Favorites from "./pages/Favorites/Favorites";
 import NotFound from "./pages/NotFound/NotFound";
 import Faq from "./components/Faq/Faq";
+import VideoChat from "./pages/Video-chat/VideoChat";
+
 
 
 
@@ -49,6 +51,8 @@ function App() {
                   <Route path="/favorites" element={<Favorites/>} />
 
                 </Route>
+                <Route path="/video-chat" element={<VideoChat/>} />
+               
                 <Route path="*" element={<NotFound/>} />
               </Routes>
             </Suspense>

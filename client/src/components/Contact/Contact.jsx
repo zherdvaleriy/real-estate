@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Contact.css";
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
@@ -9,6 +10,13 @@ import { Tilt } from "react-tilt";
 
 
 const Contact = () => {
+
+ const navigate = useNavigate()
+
+ const handleClick = () => {
+   navigate('/video-chat')
+ }
+ 
   return (
     <div id="contact-us" className="c-wrapper">
       <div className="paddings innerWidth flexCenter c-container">
@@ -65,7 +73,7 @@ const Contact = () => {
                     <span className="secondaryText">021 123 145 14</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Video Call now</div>
+                <div onClick={handleClick} className="flexCenter button">Video Call now</div>
               </div>
 
               <div className="flexColCenter mode">
@@ -96,7 +104,7 @@ const Contact = () => {
                 <img src="./estate-img1.jpg" alt="" />
               </div>
           </Tilt>
-          
+
         </div>
       </div>
     </div>

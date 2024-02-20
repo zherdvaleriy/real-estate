@@ -25,6 +25,7 @@
     "embla-carousel-react": "^8.0.0-rc22",
     "esri-leaflet-geocoder": "2.3.3",
     "framer-motion": "^10.8.5",
+    "freeice": "^2.2.2",
     "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "postcss-preset-mantine": "^1.13.0",
@@ -41,7 +42,10 @@
     "react-spinners": "^0.13.8",
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.4",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
     "swiper": "^9.1.1",
+    "uuid": "^9.0.1",
     "world-countries": "^5.0.0"
   },
   "devDependencies": {
