@@ -21,7 +21,7 @@
   .r-card > img {
     width: 15rem;
     height: 10rem;
-    border-radius: 10px;
+    border-radius: 2px;
   }
   .r-card > :nth-child(3) {
     font-size: 1.2rem;

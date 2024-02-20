@@ -19,7 +19,7 @@ const PropertyCard = ({card}) => {
   <Tilt> 
     <div 
        onClick={() => navigate(`../properties/${card.id}`)}
-       className="flexColStart r-card tilt-effect">
+       className="flexColStart r-card ">
         
         <Heart id={card?.id} />
         
@@ -31,18 +31,18 @@ const PropertyCard = ({card}) => {
 
       
             <div className='flexCenter ' style={{gap: '25px'}}>
-                  <div className='flexCenter card-ft' style={{gap: '5px'}}>
-                      <FaShower color='blue'/>
+                  <div className='flexCenter card-ft' style={{gap: '8px'}}>
+                      <FaShower color='#1f3e72'/>
                       <span>{card?.facilities?.bathrooms} </span>
                   </div>
 
-                  <div className='flexCenter card-ft' style={{gap: '5px'}}>
-                      <MdMeetingRoom color='blue'/>
+                  <div className='flexCenter card-ft' style={{gap: '8px'}}>
+                      <MdMeetingRoom color='#1f3e72'/>
                         <span>{card?.facilities?.bedrooms} </span>
                   </div>
 
-                    <div className='flexCenter card-ft' style={{gap: '5px'}}>
-                        <AiTwotoneCar color='blue'/>
+                    <div className='flexCenter card-ft' style={{gap: '8px'}}>
+                        <AiTwotoneCar color='#1f3e72'/>
                         <span>{card?.facilities?.parkings} </span>
                     </div>
             </div>

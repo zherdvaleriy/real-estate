@@ -1,35 +1,23 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
-import {Typography, AppBar} from '@material-ui/core'
+import {Typography, Button} from '@material-ui/core'
 import VideoPlayer from './components/VideoPlayer'
 import Options from './components/Options'
 import Notifications from './components/Notifications'
 import { ContextProvider } from './SocketContext';
 
-window.global = window;
+
 
 
 const useStyles = makeStyles((theme) => ({
-  //  appBar: {
-  //     borderRadius: 20,
-  //     margin: '30px 100px',
-  //     display: 'flex',
-  //     flexDirection: 'row',
-  //     justifyContent: 'center',
-  //     alignItems: 'center',
-  //     width: '600px',
-  //     // border: '2px solid black',
-  
-  //     [theme.breakpoints.down('xs')]: {
-  //       width: '90%',
-  //     },
-  //   },
+
    title: {
     color: 'white',
     marginTop: '1rem',
     marginBottom: '1rem',
     fontWeight: 'bold',
-    // fontFamily: 'Arial'
+  
 
    },
     image: {
@@ -56,15 +44,26 @@ const useStyles = makeStyles((theme) => ({
 
 const VideoChat = () => {
 const classes = useStyles()
+const navigate = useNavigate()
 
+const handleClick = () =>{
+
+ navigate('/')
+}
   return (
 
     <ContextProvider>
      <div className={`${classes.wrapper} v-chat-body`} >
 
+          <Button 
+               style={{position: 'absolute',top: '2rem', right: '18.8rem', backgroundColor: 'white', border: 'none', outline: '3px solid white', outlineOffset: '5px', borderRadius: '10px'}} 
+               onClick={handleClick} 
+               >
+            Back
+          </Button>
+        
         <Typography className={classes.title} variant='h2' align='center' >ViChat</Typography>
-          {/* <AppBar className={classes.appBar} position='static' color='inherit' >
-          </AppBar> */}
+   
         {/* video player */}
           <VideoPlayer/>
 
