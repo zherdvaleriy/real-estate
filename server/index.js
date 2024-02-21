@@ -22,6 +22,9 @@ app.use('/api/residency', residencyRoute);
 
 app.listen(port, () => console.log(`Server started on port: ${port}.`));
 
+
+
+
 // Socket.IO setup
 import { createServer } from 'http';
 import { Server } from 'socket.io';
@@ -34,13 +37,11 @@ const io = new Server(httpServer, {
     }
 });
 
-io.on('connection', (socket) => {
-    // ... your socket event handlers
-});
+
 
 const port1 =  5500;
 httpServer.listen(port1, () => {
-    console.log(`Server  2 started on port: ${port1}`);
+    console.log(`Server-2 started on port: ${port1}`);
 });
 
 app.get('/', (req, res) => {

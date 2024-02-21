@@ -48,12 +48,14 @@
 a:not(.nav-logo):hover{
   border-bottom: 2px solid white;
   scale: 1.06;
-  color: var(--blue);
+  color: #1f3e72;
+  font-weight: 700;
 }
 
 .add-property:hover{
   border-bottom: 2px solid white;
   scale: 1.06;
-  color: var(--blue);
+  color: #1f3e72;
+  font-weight: 700;
 }
 

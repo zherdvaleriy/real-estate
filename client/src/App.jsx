@@ -44,11 +44,11 @@ function App() {
                   <Route path="/" element={<Website/>} />
                   <Route path="/faq" element={<Faq/>} />
                   <Route path="/properties">
-                    <Route index element={<Properties/>} />
-                    <Route path=":propertyId" element={<Property/>} />
-                  </Route>
-                  <Route path="/bookings" element={<Bookings/>} />
-                  <Route path="/favorites" element={<Favorites/>} />
+                      <Route index element={<Properties/>} />
+                      <Route path=":propertyId" element={<Property/>} />
+                      </Route>
+                      <Route path="/bookings" element={<Bookings/>} />
+                   <Route path="/favorites" element={<Favorites/>} />
 
                 </Route>
                 <Route path="/video-chat" element={<VideoChat/>} />
