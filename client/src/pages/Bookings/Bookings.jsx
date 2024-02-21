@@ -46,7 +46,7 @@ if(isLoading){
             <h2>My Bookings</h2>
           <SearchBar filter={filter} setFilter={setFilter} />
 
-          <div className="paddings flexCenter properties">
+          <div className="paddings flexCenter properties" style={{gap: '20px'}}>
 
             {
                 // data.map((card, index) => (<PropertyCard card={card} key={index} />))

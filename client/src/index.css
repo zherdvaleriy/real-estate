@@ -133,3 +133,12 @@ a {
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.tilt-effect {
+  background: linear-gradient(135deg, #e9e5e5, #adcef0, rgb(172, 172, 238));
+}
+
+
+
+
+

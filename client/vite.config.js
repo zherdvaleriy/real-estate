@@ -11,4 +11,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['embla-carousel-react'],
   }
+
+  
 })
