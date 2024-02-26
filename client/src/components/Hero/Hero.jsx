@@ -16,7 +16,16 @@ const Hero = () => {
         {/* left side */}
         <div className="flexColStart hero-left">
           <div className="hero-title">
-            <div className="orange-circle" />
+            <motion.div 
+                className="orange-circle"
+                initial={{ y: '-100vh', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  duration: 4,
+                  type: "ease-out",
+                }}
+                />
+
             <motion.h1
             initial={{ y: "2rem", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

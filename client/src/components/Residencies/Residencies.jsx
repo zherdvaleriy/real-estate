@@ -8,6 +8,7 @@ import { sliderSettings } from "../../utils/common";
 import PropertyCard from "../PropertyCard/PropertyCard";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
+import {motion} from 'framer-motion'
 
 
 
@@ -16,6 +17,8 @@ import { PuffLoader } from "react-spinners";
 const Residencies = () => {
 
   const {data, isError, isLoading} = useProperties()
+
+  const text = 'Popular Residencies'
 
   if(isError){
     return (
@@ -45,7 +48,27 @@ if(isLoading){
       <div className="paddings innerWidth r-container">
         <div className="flexColStart r-head">
           <span className="orangeText">Best Choices</span>
-          <span className="primaryText">Popular Residencies</span>
+
+          {/* <span className="primaryText">Popular Residencies</span> */}
+          <div className="primaryText">
+            {text.split("").map((letter, index) => (
+              <motion.span
+                    key={index}
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 0 }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      delay: index * 0.1,
+                    }}
+                  >
+                    {letter}
+              </motion.span>
+            ))}
+        
+          </div>
+
+
         </div>
         <Swiper {...sliderSettings}>
           <SlideNextButton />
