@@ -1,5 +1,4 @@
 import "./Hero.css";
-import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import {Tilt} from 'react-tilt'
 // import SearchBar from "../SearchBar/SearchBar.jsx";
@@ -49,30 +48,6 @@ const Hero = () => {
             <span className="info-welcome">Welcome to our estate agency, where we specialize in personalized service and expert guidance to help you find the perfect home. With a commitment to integrity and client satisfaction, we are dedicated to making your real estate journey smooth and successful.</span>
           </div>
 
-         {/* <SearchBar/> */}
-
-          {/* <div className="flexCenter stats">
-            <div className="flexColCenter stat">
-              <span>
-                <CountUp start={8800} end={9000} duration={4} /> <span>+</span>
-              </span>
-              <span className="">Premium Product</span>
-            </div>
-
-            <div className="flexColCenter stat">
-              <span>
-                <CountUp start={1950} end={2000} duration={4} /> <span>+</span>
-              </span>
-              <span className="">Happy Customer</span>
-            </div>
-
-            <div className="flexColCenter stat">
-              <span>
-                <CountUp end={28} /> <span>+</span>
-              </span>
-              <span className="">Awards Winning</span>
-            </div>
-          </div> */}
         </div>
 
         {/* right side */}

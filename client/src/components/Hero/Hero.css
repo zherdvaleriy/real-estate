@@ -9,7 +9,7 @@
   background-position: top;
   font-size: 19px;
   font-weight: 500;
-  height: 100vh;
+  height: 80vh;
 }
 
 
@@ -36,8 +36,8 @@
   margin-bottom: 20px;
 }
 .orange-circle {
-  height: 8.99rem;
-  width: 9rem;
+  height: 6.99rem;
+  width: 7rem;
   background: var(--orange-gradient);
   border-radius: 999px;
   position: absolute;

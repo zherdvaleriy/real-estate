@@ -11,6 +11,9 @@ import Value from "../components/Value/Value";
 import { motion } from "framer-motion";
 import Faq from '../components/Faq/Faq.jsx';
 import Awards from '../components/Awards/Awards.jsx';
+import CountUps from '../components/Count-up/CountUps.jsx';
+import VideoBox from '../components/Video-box/VideoBox.jsx';
+
 
 
 
@@ -24,7 +27,10 @@ const Website = () => {
      
       <Hero />
     </div>
+      <CountUps/>
       <Companies />
+     
+      <VideoBox/>
       <Awards/>
       <Residencies/>
       <Value/>
