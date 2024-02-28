@@ -17,6 +17,7 @@ import Favorites from "./pages/Favorites/Favorites";
 import NotFound from "./pages/NotFound/NotFound";
 import Faq from "./components/Faq/Faq";
 import VideoChat from "./pages/Video-chat/VideoChat";
+import About from "./pages/About/About";
 
 
 
@@ -43,6 +44,8 @@ function App() {
                   
                   <Route path="/" element={<Website/>} />
                   <Route path="/faq" element={<Faq/>} />
+                  <Route path="/about" element={<About/>} />
+
                   <Route path="/properties">
                       <Route index element={<Properties/>} />
                       <Route path=":propertyId" element={<Property/>} />

@@ -18,7 +18,7 @@ const Companies = () => {
             
         </div>
 
-        <video src="/video-3.mp4" autoPlay loop muted  className="video"/>
+        <video src="/video-4.mp4" autoPlay loop muted  className="video"/>
        
       </div>
     </section>

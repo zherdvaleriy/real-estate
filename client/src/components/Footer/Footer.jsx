@@ -66,7 +66,7 @@ const Footer = () => {
             
             <span><Link to={'/faq'} >FAQ</Link></span>
 
-            <span>About Us</span>
+            <span><Link to={'/about'} >About Us</Link></span>
           </div>
         </div>
       </div>

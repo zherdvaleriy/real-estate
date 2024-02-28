@@ -7,11 +7,12 @@ import {Tilt} from 'react-tilt'
 
 
 
-
 const Hero = () => {
+
   return (
+
     <section className="hero-wrapper">
-   
+
       <div className="paddings innerWidth flexCenter hero-container">
         {/* left side */}
         <div className="flexColStart hero-left">
@@ -21,7 +22,7 @@ const Hero = () => {
                 initial={{ y: '-100vh', opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
-                  duration: 4,
+                  duration: 2,
                   type: "ease-out",
                 }}
                 />
@@ -40,8 +41,8 @@ const Hero = () => {
             </motion.h1>
           </div>
           <div className="flexColStart flex-hero-des">
-            <span>Find a variety of properties that suit you very easily</span>
-            <span>Forget all difficulties in finding a residence for you</span>
+            <span style={{color: 'gray'}}>Find a variety of properties that suit you very easily</span>
+            <span style={{color: 'gray'}}>Forget all difficulties in finding a residence for you</span>
           </div>
 
           <div className="flexCenter " style={{width: '25rem'}}>
@@ -86,16 +87,17 @@ const Hero = () => {
                       type: "ease-in",
                     }}
                     className="image-container"
+                    style={{height: '30rem', width: '30rem', borderRadius: '50%'}}
                   >
 
-                        <img src="./banner3.jpg" alt="houses"/> 
+                        <img src="./estate-image.jpg" alt="houses"/> 
 
                   </motion.div>
               </div>
             </Tilt>
     </div>
-      
     </section>
+
   );
 };
 

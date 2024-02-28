@@ -11,7 +11,7 @@
 }
 
 .companies-logo{
-    position: absolute;
+    /* position: absolute; */
     top: 50rem;
     width: 100vw;
     display: flex;
