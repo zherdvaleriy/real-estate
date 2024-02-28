@@ -62,7 +62,7 @@ const Footer = () => {
           <span className="secondaryText">145 New York, FL 5467, USA</span>
           <div className="flexColCenter f-menu">
             <span> <Link to={'/properties'} >Properties</Link> </span>
-            <span>Services</span>
+            <span><Link to={'/services'} >Services</Link></span>
             
             <span><Link to={'/faq'} >FAQ</Link></span>
 

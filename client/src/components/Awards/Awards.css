@@ -10,19 +10,6 @@
 }
 
 
-
-
-/* .heading {
-  text-align: center;
-  width: 60%;
-  margin: auto;
-} */
-/* .heading h1 {
-  color: #2d3954;
-  font-weight: 600;
-  text-transform: capitalize;
-  font-size: 35px;
-} */
 .heading p {
   color: #72809d;
 }
@@ -35,14 +22,7 @@
   grid-gap: 30px;
 }
 
-label {
-  color: #2d3954;
-  font-size: 14px;
-}
 
-/* .mtop {
-  margin-top: 50px;
-} */
 
 h4 {
   font-weight: 500;
@@ -97,6 +77,10 @@ h4 {
     border-radius: 4% 50%;
     font-size: 32px;
     color: #ffffff;
+  }
+
+  .awards .icon:hover{
+    color: rgb(113, 173, 201);
   }
   .awards h1 {
     font-size: 32px;

@@ -51,7 +51,7 @@ const Hero = () => {
 
          {/* <SearchBar/> */}
 
-          <div className="flexCenter stats">
+          {/* <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
                 <CountUp start={8800} end={9000} duration={4} /> <span>+</span>
@@ -72,7 +72,7 @@ const Hero = () => {
               </span>
               <span className="">Awards Winning</span>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* right side */}
@@ -81,13 +81,13 @@ const Hero = () => {
               <div className="flexCenter hero-right">
                   <motion.div
                     initial={{ x: "7rem", opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
+                    animate={{ x: 0, opacity: 0.8 }}
                     transition={{
                       duration: 2,
                       type: "ease-in",
                     }}
                     className="image-container"
-                    style={{height: '30rem', width: '30rem', borderRadius: '50%'}}
+                    style={{height: '28rem', width: '28rem', borderRadius: '50%'}}
                   >
 
                         <img src="./estate-image.jpg" alt="houses"/> 

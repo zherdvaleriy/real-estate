@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Faq from "./components/Faq/Faq";
 import VideoChat from "./pages/Video-chat/VideoChat";
 import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
 
 
 
@@ -45,6 +46,8 @@ function App() {
                   <Route path="/" element={<Website/>} />
                   <Route path="/faq" element={<Faq/>} />
                   <Route path="/about" element={<About/>} />
+                  <Route path="/services" element={<Services/>} />
+
 
                   <Route path="/properties">
                       <Route index element={<Properties/>} />
