@@ -143,3 +143,12 @@
   }
   
 }
+
+@media  (max-width: 1000px){
+
+  .hero-right{
+   display: none;
+  
+  }
+  
+}
