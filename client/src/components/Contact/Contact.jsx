@@ -101,7 +101,7 @@ const Contact = () => {
 
           <Tilt>
               <div className="image-container">
-                <img src="./estate-img1.jpg" alt="" />
+                <img src="./banner3.jpg" alt="" />
               </div>
           </Tilt>
 

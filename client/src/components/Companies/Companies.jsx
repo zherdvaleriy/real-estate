@@ -1,28 +1,22 @@
 import React from "react";
+import { Tech } from "./components";
 import './Companies.css'
 
 
 
 
-const Companies = () => {
+
+function Companies() {
+
   return (
-    <section className="c-wrapper company">
-      <div className="overlay"></div>
-      <div className="paddings flexCenter c-container">
+      <section style={{marginTop: '20px '}} className="container flexCenter paddings" >
 
-        <div className="companies-logo">
-            <img src="./prologis.png" alt="" />
-            <img src="./tower.png" alt="" />
-            <img src="./equinix.png" alt="" />
-            <img src="./realty.png" alt="" />
-            
-        </div>
+        <Tech/>
 
-        <video src="/video-3.mp4" autoPlay loop muted  className="video"/>
-       
-      </div>
-    </section>
-  );
-};
+      </section>
+  
+  )
+}
 
 export default Companies;
+

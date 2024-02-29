@@ -4,11 +4,12 @@
   width: 65%;
   margin: 0 auto;
   margin-top: 2rem;
-    border-radius: 5px;
-    background-image: radial-gradient(
+  border-radius: 5px;
+    /* background-image: radial-gradient(
       var(--mantine-color-blue-6) 0%,
       var(--mantine-color-blue-4) 100%
-    );
+    ); */
+    background-color: var(--blue);
     background-repeat: no-repeat;
     background-position: top left;
     position: relative;
