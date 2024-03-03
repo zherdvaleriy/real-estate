@@ -31,7 +31,15 @@ const Header = () => {
 
   return (
     <section className="h-wrapper" style={{ backgroundColor: 'var( --gray) '}}>
-      <div className="flexCenter innerWidth paddings h-container">
+      <div 
+      className="flexCenter innerWidth paddings h-container"
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+        
+      }}
+      >
         {/* logo */}
         <Link className="nav-logo" to={'/'} >
            <img src="./logo.svg" alt="logo" width={170} style={{ filter: `invert(100%)`}} />
@@ -67,7 +75,7 @@ const Header = () => {
 
 
               { !isAuthenticated ?
-                (<button className="button" onClick={loginWithRedirect} >
+                (<button style={{marginBottom: '15px'}} className="button" onClick={loginWithRedirect} >
                     Login
                   </button>) : 
                 (<ProfileMenu user={user} logout={logout} />)
