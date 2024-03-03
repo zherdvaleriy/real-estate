@@ -162,6 +162,23 @@ img {
 }
 
 
+.team-card-container{
+   width: 90%;
+   margin: 0 auto;
+
+}
+
+@media screen and (max-width: 1300px) {
+  .cont-team {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card-team-box{
+ 
+  flex-wrap: wrap;
+  }
+
+}
 
 
 

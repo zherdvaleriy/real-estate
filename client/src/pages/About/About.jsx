@@ -2,6 +2,7 @@ import React from "react"
 import Back from "./components/Back"
 import Heading from "./components/Heading"
 import "./About.css"
+import Team from "./components/Team"
 
 
 
@@ -23,6 +24,12 @@ const About = () => {
           <div className='right row'>
             <img src='./office1.jpg' alt='image' />
           </div>
+        </div>
+      </section>
+
+      <section className="team-card-container">
+        <div className="team-contain">
+          <Team/>
         </div>
       </section>
 

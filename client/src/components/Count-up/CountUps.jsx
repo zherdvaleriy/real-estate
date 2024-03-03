@@ -9,7 +9,7 @@ const CountUps = () => {
 
   return (
     <section>
-        <div style={{marginTop: '30px', borderRadius: '5px'}} className="flexCenter stats container paddings">
+        <div style={{marginTop: '30px', borderRadius: '5px', justifyContent: 'space-between'}} className="flexCenter stats container paddings">
             <div className="flexColCenter stat">
             <span>
                 <CountUp start={8000} end={9000} duration={4} /> <span>+</span>

@@ -10,9 +10,9 @@ const Hero = () => {
 
   return (
 
-    <section className="hero-wrapper">
+    <section  className="hero-wrapper">
 
-      <div className="paddings innerWidth flexCenter hero-container">
+      <div style={{justifyContent: 'space-between'}} className="paddings innerWidth flexCenter hero-container">
         {/* left side */}
         <div className="flexColStart hero-left">
           <div className="hero-title">

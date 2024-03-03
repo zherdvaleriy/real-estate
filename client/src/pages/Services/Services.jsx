@@ -1,6 +1,10 @@
 import React from "react"
 import img from "/services.jpg"
 import Back from "./Back"
+import ServicesCards from "./ServicesCards"
+import './Services.css'
+
+
 
 // import "../home/featured/Featured.css"
 // import FeaturedCard from "../home/featured/FeaturedCard"
@@ -14,6 +18,23 @@ const Services = () => {
           {/* <FeaturedCard /> */}
         </div>
       </section>
+
+
+
+        <h1 style={{
+          textAlign: 'center',
+          color: 'gray'
+        }}>Services we Offer.</h1>
+      <section 
+      className="services-container flexCenter cont-services"
+      style={{
+        paddingBottom: '60px'
+      }}
+      >
+       <ServicesCards/>
+      </section>
+
+
 
       <section className='footerContact'>
         <div className='container'>
