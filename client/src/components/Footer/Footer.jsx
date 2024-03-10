@@ -53,13 +53,13 @@ const Footer = () => {
         </div>
 
         <div className="paddings innerWidth " style={{width: '30rem'}} >
-            <Map address={'145 New York, FL 5467, USA'} />
+            <Map address={'68305, Mannheim, Germany'} />
         </div>
 
         
         <div className="flexColStart f-right">
           <span className="primaryText">Information</span>
-          <span className="secondaryText">145 New York, FL 5467, USA</span>
+          <span className="secondaryText"> Mannheim, 68305,  Germany</span>
           <div className="flexColCenter f-menu">
             <span> <Link to={'/properties'} >Properties</Link> </span>
             <span><Link to={'/services'} >Services</Link></span>

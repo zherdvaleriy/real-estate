@@ -39,7 +39,7 @@ import {
     },
     {
       name: "Realty",
-      icon: realty,
+      icon: real,
     },
     {
       name: "React JS",
