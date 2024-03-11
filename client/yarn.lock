@@ -816,7 +816,7 @@
   resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.47.0.tgz#c41c680d1947e3ab2d60af3febc4132287c60596"
   integrity sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==
 
-"@terraformer/arcgis@^2.0.7":
+"@terraformer/arcgis@^2.1.0":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@terraformer/arcgis/-/arcgis-2.1.2.tgz#9e05cc5e0ddc400e532f6ccb1d91bdf420e4a756"
   integrity sha512-IvdfqehcNAUtKU1OFMKwPT8EvdKlVFZ7q7ZKzkIF8XzYZIVsZLuXuOS1UBdRh5u/o+X5Gax7jiZhD8U/4TV+Jw==
@@ -1507,20 +1507,20 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-esri-leaflet-geocoder@2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/esri-leaflet-geocoder/-/esri-leaflet-geocoder-2.3.3.tgz#aacdd2bc4d3566004bcf33e634956d3ad650a35d"
-  integrity sha512-eA60epI3PE4G0aHnOgvsLg2wi4V6Svg9c6uzEWABFj4Thy1ZLjypzNRpTxSPqB5el2b6ntyCr6ZDsf7d2F41vg==
+esri-leaflet-geocoder@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/esri-leaflet-geocoder/-/esri-leaflet-geocoder-3.1.4.tgz#13a7ca538022aeebf2aa7d96c14a021644d413de"
+  integrity sha512-VMqWgbB7/3X8GuIaUemn/NGlLr3BB51ZpBWBfj/Q71HDXBKIPnGExUuXU9wqblYlj1j3w8uhwVKSGEHPpX+QiA==
   dependencies:
-    esri-leaflet "^2.1.4"
+    esri-leaflet "^3.0.2"
     leaflet "^1.0.0"
 
-esri-leaflet@^2.1.4:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/esri-leaflet/-/esri-leaflet-2.5.3.tgz#ccf0c7463c7f9b6dfe27aab478740c3dbd8fe25b"
-  integrity sha512-zapunrhhhKyiVP5NCSfFjD7YqWYYYD3OONVjBFWZgX2KbD6ssUQ3KnXVo2U0hswWfJDIoHF7g9PLZ4rDNuQnvA==
+esri-leaflet@^3.0.2:
+  version "3.0.12"
+  resolved "https://registry.yarnpkg.com/esri-leaflet/-/esri-leaflet-3.0.12.tgz#4c88d663a7dac9334d9752c518aa4d8f589ffb65"
+  integrity sha512-Yi7oH/mK4quOlCe920yuEYvUk0BjJRjmmE78ReAdJT5EbibW5wJoT9DtvG3JEJD22mQ0oF1LhcfL0Wb5jRhDAQ==
   dependencies:
-    "@terraformer/arcgis" "^2.0.7"
+    "@terraformer/arcgis" "^2.1.0"
     tiny-binary-search "^1.0.3"
 
 estree-walker@^2.0.2:
