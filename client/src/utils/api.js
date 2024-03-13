@@ -63,7 +63,7 @@ export const createUser = async (email, token) => {
         }
       });
     } catch (error) {
-      toast.error('Something went wrong, please try again!');
+      // toast.error('Something went wrong, please try again!');
       throw error;
     }
   };

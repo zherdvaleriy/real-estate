@@ -144,10 +144,25 @@
   
 }
 
+@media  (max-width: 400px){
+
+  .flex-hero-des{
+    opacity: 0;
+  }
+  .info-welcome{
+   opacity: 0;
+  
+  }
+  
+}
+
+
+
+
 @media  (max-width: 1000px){
 
   .hero-right{
-   display: none;
+   opacity: 0;
   
   }
   
