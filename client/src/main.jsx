@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         domain="dev-c87x3xt1htz35oeu.us.auth0.com"
         clientId="Va3xnKAWV8aGeCxvZdAOiiniXhqPwFux"
         authorizationParams={{
-          redirect_uri: "http://localhost:5173"
+          redirect_uri: "https://real-estate-rust-tau.vercel.app"
         }}
         audience="http://localhost:8500"
         scope="openid profile email"
