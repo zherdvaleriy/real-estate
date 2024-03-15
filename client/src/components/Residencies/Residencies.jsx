@@ -49,8 +49,8 @@ if(isLoading){
         <div className="flexColStart r-head">
           <span className="orangeText">Best Choices</span>
 
-          {/* <span className="primaryText">Popular Residencies</span> */}
-          <div className="primaryText">
+          <span className="primaryText">Popular Residencies</span>
+          {/* <div className="primaryText">
             {text.split("").map((letter, index) => (
               <motion.span
                     key={index}
@@ -66,7 +66,7 @@ if(isLoading){
               </motion.span>
             ))}
         
-          </div>
+          </div> */}
 
 
         </div>

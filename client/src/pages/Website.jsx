@@ -26,19 +26,19 @@ const Website = () => {
       <div className="white-gradient"/>
      
       <Hero />
+      <CountUps />
     </div>
-      <CountUps/>
-      <Companies />
+      {/* <Companies /> */}
      
       <VideoBox/>
-      <Awards/>
+      {/* <Awards/> */}
       <Residencies/>
       <Value/>
       <Contact/>
     
         <Chatbot />
     
-        <GetStarted/>
+        {/* <GetStarted/> */}
         {/* <Faq/> */}
 
     </div>
