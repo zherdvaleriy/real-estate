@@ -56,3 +56,11 @@
     color: orange;
 }
 
+@media  (max-width: 1000px){
+
+    .com {
+     opacity: 0;
+    
+    }
+    
+  }

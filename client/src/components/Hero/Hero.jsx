@@ -39,14 +39,14 @@ const Hero = () => {
               <br />  <span > Dream</span>
             </motion.h1>
           </div>
-          <div className="flexColStart flex-hero-des">
+          {/* <div className="flexColStart flex-hero-des">
             <span style={{color: 'gray'}}>Find a variety of properties that suit you very easily</span>
             <span style={{color: 'gray'}}>Forget all difficulties in finding a residence for you</span>
           </div>
 
           <div className="flexCenter " style={{width: '25rem'}}>
             <span className="info-welcome">Welcome to our estate agency, where we specialize in personalized service and expert guidance to help you find the perfect home. With a commitment to integrity and client satisfaction, we are dedicated to making your real estate journey smooth and successful.</span>
-          </div>
+          </div> */}
 
         </div>
 
