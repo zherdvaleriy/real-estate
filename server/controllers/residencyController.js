@@ -29,7 +29,7 @@ export const createResidency = asyncHandler(async (req, res) => {
         if (error.code === 'P2002') {
             res.status(400).json({ message: 'A residency with this address is already enlisted' })
           } else {
-            res.status(500).json({ message: 'Internal Server Error' })
+            res.status(500).json({ message: 'Internal Server error' })
 
           }
         }
